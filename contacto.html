@@ -65,7 +65,7 @@
             </div>
         </div>
         <div class="contact-form-wrapper">
-            <form class="contact-form" action="#" method="post">
+            <form class="contact-form" id="whatsapp-contact-form">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
@@ -80,6 +80,26 @@
                 </div>
                 <button type="submit" class="form-button">ENVIAR MENSAJE <span>→</span></button>
             </form>
+            <script>
+                document.getElementById('whatsapp-contact-form').addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const nombre = document.getElementById('nombre').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const mensaje = document.getElementById('mensaje').value.trim();
+
+                    let texto = `Hola, soy ${nombre}.`;
+                    texto += `\nEmail: ${email}`;
+                    if (mensaje) {
+                        texto += `\nMensaje: ${mensaje}`;
+                    }
+
+                    const numero = '51904628780';
+                    const url = `https://api.whatsapp.com/send/?phone=${numero}&text=${encodeURIComponent(texto)}&type=phone_number&app_absent=0`;
+
+                    window.open(url, '_blank', 'noopener');
+                });
+            </script>
         </div>
     </div>
 </section>
