@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contáctanos para planificar tu próximo evento en Lima.">
+<title>Contacto | ShowTech Solutions</title>
+<link rel="icon" type="image/png" href="Media/cropped-Logo-ShowTech-1-1.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+
+<!-- TOPBAR -->
+<div class="topbar">
+    <div class="topbar-container">
+        <div>Experiencias que conectan</div>
+        <div class="topbar-right">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">TikTok</a>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="Media/Logo-ShowTech-1.png" alt="ShowTech Solutions" class="logo-img">
+        </a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-button"><span></span><span></span><span></span></label>
+        
+        <nav class="navigation">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html" class="nav-contact">Contacto</a>
+        </nav>
+    
+    </div>
+</header>
+
+<main>
+
+<section class="page-hero" style="background-image:url('Media/Reuniones.png')">
+    <div class="page-hero-content">
+        <div class="breadcrumb"><a href="index.html" style="color:inherit">Inicio</a> <span>/</span> Contacto</div>
+        <h1>¡Comencemos <span style="color:var(--orange)">a planificar!</span></h1>
+        <p class="page-hero-lead">Contáctanos y cuéntanos sobre tu próximo evento.</p>
+    </div>
+</section>
+
+<section class="contact section">
+    <div class="container contact-grid">
+        <div class="contact-intro">
+            <div class="section-label light"><span>01</span> CONTACTO</div>
+            <h2>Hablemos de <strong>tu evento.</strong></h2>
+            <p>Escríbenos y te responderemos a la brevedad para coordinar los siguientes pasos.</p>
+            <div class="contact-details">
+                <div><span>LLÁMANOS</span><a href="https://api.whatsapp.com/send/?phone=51904628780&text&type=phone_number&app_absent=0" target="_blank" rel="noopener">+51 904 628 780</a></div>
+                <div><span>ESCRÍBENOS</span><a href="mailto:contacto@showtechsolutions.com.pe">contacto@showtechsolutions.com.pe</a></div>
+                <div><span>DIRECCIÓN</span><p>Av. Prol. Iquitos 2001, Lince 15046</p></div>
+            </div>
+        </div>
+        <div class="contact-form-wrapper">
+            <form class="contact-form" id="whatsapp-contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="correo@empresa.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Cuéntanos sobre tu evento..."></textarea>
+                </div>
+                <button type="submit" class="form-button">ENVIAR MENSAJE <span>→</span></button>
+            </form>
+            <script>
+                document.getElementById('whatsapp-contact-form').addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const nombre = document.getElementById('nombre').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const mensaje = document.getElementById('mensaje').value.trim();
+
+                    let texto = `Hola, soy ${nombre}.`;
+                    texto += `\nEmail: ${email}`;
+                    if (mensaje) {
+                        texto += `\nMensaje: ${mensaje}`;
+                    }
+
+                    const numero = '51904628780';
+                    const url = `https://api.whatsapp.com/send/?phone=${numero}&text=${encodeURIComponent(texto)}&type=phone_number&app_absent=0`;
+
+                    window.open(url, '_blank', 'noopener');
+                });
+            </script>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-main">ShowTech Solutions</span>
+                    <span class="logo-sub">EVENTS</span>
+                </a>
+                <p>Organizadores de eventos en Lima. Planifiquemos juntos tu próximo evento.</p>
+            </div>
+            <div class="footer-column">
+                <h4>NAVEGACIÓN</h4>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-column">
+                <h4>SERVICIOS</h4>
+                <a href="servicios.html#produccion-tecnica">Producción Técnica</a>
+                <a href="servicios.html#escenografia">Escenografía y Ambientación</a>
+                <a href="servicios.html#streaming">Transmisión y Streaming</a>
+            </div>
+            <div class="footer-column">
+                <h4>CONTACTO</h4>
+                <a href="mailto:contacto@showtechsolutions.com.pe">contacto@showtechsolutions.com.pe</a>
+                <a href="https://api.whatsapp.com/send/?phone=51904628780&text&type=phone_number&app_absent=0" target="_blank" rel="noopener">+51 904 628 780</a>
+                <span>Av. Prol. Iquitos 2001, Lince 15046</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 ShowTech Solutions EVENTS. Todos los derechos reservados.</span>
+            <div>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- BOTÓN FLOTANTE DE WHATSAPP -->
+<a
+    href="https://api.whatsapp.com/send/?phone=51904628780&text&type=phone_number&app_absent=0"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Escríbenos por WhatsApp"
+>
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16.004 3C9.376 3 4 8.376 4 15.004c0 2.377.664 4.6 1.815 6.494L4 29l7.69-1.78a11.94 11.94 0 0 0 4.314.8h.004c6.627 0 12.003-5.376 12.003-12.004C28.011 8.376 22.635 3 16.004 3Zm0 21.86h-.003a9.86 9.86 0 0 1-5.02-1.375l-.36-.214-4.564 1.056 1.078-4.448-.235-.372a9.83 9.83 0 0 1-1.51-5.243c0-5.44 4.427-9.867 9.87-9.867 2.637 0 5.116 1.028 6.98 2.894a9.803 9.803 0 0 1 2.888 6.977c0 5.44-4.428 9.868-9.868 9.868l-.256.224Zm5.41-7.386c-.297-.148-1.755-.866-2.027-.965-.272-.099-.47-.148-.668.148-.198.297-.767.965-.94 1.163-.173.198-.347.223-.644.075-.297-.148-1.253-.462-2.386-1.472-.882-.786-1.478-1.757-1.651-2.054-.173-.297-.019-.457.13-.605.134-.133.297-.347.446-.52.148-.173.198-.297.297-.495.099-.198.05-.372-.025-.52-.075-.148-.668-1.612-.916-2.208-.242-.581-.487-.502-.668-.512l-.569-.01c-.198 0-.52.075-.792.372-.272.297-1.04 1.017-1.04 2.48 0 1.463 1.065 2.877 1.213 3.075.148.198 2.098 3.203 5.085 4.492.71.306 1.264.489 1.696.626.712.226 1.36.194 1.872.118.571-.085 1.755-.717 2.002-1.41.248-.693.248-1.286.173-1.41-.074-.123-.272-.198-.569-.347Z"/>
+    </svg>
+</a>
+
+
+</body>
+</html>
