@@ -269,7 +269,7 @@ button, input, textarea, select { font: inherit; }
    SECCIONES
 ========================================================= */
 .section { padding: 125px 0; }
-.section-label { display: flex; align-items: center; gap: 12px; color: var(--gray); font-size: 10px; font-weight: 800; letter-spacing: .17em; }
+.section-label { display: flex; align-items: center; gap: 12px; color: var(--gray); font-size: 15px; font-weight: 800; letter-spacing: .17em; }
 .section-label span { color: var(--orange); }
 .section-heading { max-width: 850px; margin-bottom: 60px; }
 .section-heading h2, .why-header h2, .clients-header h2 {
@@ -594,7 +594,7 @@ button, input, textarea, select { font: inherit; }
 .footer-column h4 { margin-bottom: 12px; color: var(--orange); font-size: 9px; letter-spacing: .16em; }
 .footer-column a, .footer-column span { color: rgba(255,255,255,.6); font-size: 12px; transition: .25s ease; }
 .footer-column a:hover { color: white; }
-.footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 25px; color: rgba(255,255,255,.35); font-size: 10px; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 25px; color: rgb(255, 255, 255); font-size: 15px; }
 .footer-bottom div { display: flex; gap: 20px; }
 .footer-bottom a:hover { color: white; }
 
