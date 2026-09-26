@@ -177,7 +177,7 @@ button, input, textarea, select { font: inherit; }
    HERO
 ========================================================= */
 .hero {
-    min-height: calc(100vh - 126px);
+    min-height: calc(100vh - 88px);
     position: relative;
     display: flex;
     align-items: center;
