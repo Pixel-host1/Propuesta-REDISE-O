@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Libro de Reclamaciones virtual de ShowTech Solutions, conforme al Código de Protección y Defensa del Consumidor.">
+<title>Libro de Reclamaciones | ShowTech Solutions</title>
+<link rel="icon" type="image/png" href="Media/cropped-Logo-ShowTech-1-1.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="Media/Logo-ShowTech-1.png" alt="ShowTech Solutions" class="logo-img">
+        </a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-button"><span></span><span></span><span></span></label>
+
+        <nav class="navigation">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html" class="nav-contact">Contacto</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<section class="page-hero page-hero-compact">
+    <div class="page-hero-content">
+        <div class="breadcrumb"><a href="index.html" style="color:inherit">Inicio</a> <span>/</span> Libro de reclamaciones</div>
+        <h1>Libro de <span style="color:var(--orange)">reclamaciones.</span></h1>
+        <p class="page-hero-lead">Registra tu reclamo o queja. Te responderemos en un plazo no mayor a 15 días hábiles.</p>
+        <p class="legal-updated">Última actualización: 17 de octubre de 2026</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container" style="max-width:920px">
+
+        <div class="lr-notice">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5C3 4.7 3.7 4 4.5 4H10c1.1 0 2 .9 2 2v14c0-.8-.7-1.5-1.5-1.5h-6c-.8 0-1.5-.7-1.5-1.5V5.5Z"/><path d="M21 5.5c0-.8-.7-1.5-1.5-1.5H14c-1.1 0-2 .9-2 2v14c0-.8.7-1.5 1.5-1.5h6c.8 0 1.5-.7 1.5-1.5V5.5Z"/><path d="M6 8h3M6 11h3M15 8h3M15 11h3"/></svg>
+            <div>
+                <h2>Conforme a lo establecido en el Código de Protección y Defensa del Consumidor, este establecimiento cuenta con un Libro de Reclamaciones a tu disposición.</h2>
+                <p>Completa la hoja de reclamación. Al enviarla verás tu número de reclamo y te llegará una copia a tu correo electrónico. Los campos con <span class="req">*</span> son obligatorios.</p>
+            </div>
+        </div>
+
+        <div id="lr-form-wrap">
+        <form class="lr-form contact-form" id="lr-form" novalidate>
+
+            <div class="lr-block">
+                <div class="lr-block-title"><span>01</span> Datos del proveedor</div>
+                <dl class="lr-provider">
+                    <div><dt>Razón social</dt><dd>SHOWTECH SOLUTIONS S.A.C.</dd></div>
+                    <div><dt>RUC</dt><dd>20613979051</dd></div>
+                    <div><dt>Nombre comercial</dt><dd>ShowTech Solutions</dd></div>
+                    <div><dt>Domicilio</dt><dd>Mz. F9 Lote 10, Agrupación Pachacamac, Parcela 3C, Grupo F, Villa El Salvador, Lima - Lima</dd></div>
+                    <div><dt>Fecha</dt><dd id="lr-fecha">—</dd></div>
+                    <div><dt>Hoja de reclamación N.º</dt><dd>Se asigna al enviar</dd></div>
+                </dl>
+            </div>
+
+            <fieldset class="lr-block">
+                <legend><span>02</span> Identificación del consumidor reclamante</legend>
+                <div class="lr-grid">
+                    <div class="form-group"><label for="lr-nombres">Nombres <span class="req">*</span></label><input id="lr-nombres" name="nombres" autocomplete="given-name" required></div>
+                    <div class="form-group"><label for="lr-apellidos">Apellidos <span class="req">*</span></label><input id="lr-apellidos" name="apellidos" autocomplete="family-name" required></div>
+                    <div class="form-group"><label for="lr-tipodoc">Tipo de documento <span class="req">*</span></label>
+                        <select id="lr-tipodoc" name="tipo_documento" required>
+                            <option value="DNI">DNI</option>
+                            <option value="Carné de extranjería">Carné de extranjería</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                            <option value="RUC">RUC</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label for="lr-numdoc">Número de documento <span class="req">*</span></label><input id="lr-numdoc" name="numero_documento" inputmode="numeric" required></div>
+                    <div class="form-group full"><label for="lr-domicilio">Domicilio <span class="req">*</span></label><input id="lr-domicilio" name="domicilio" autocomplete="street-address" placeholder="Dirección, distrito, provincia y departamento" required></div>
+                    <div class="form-group"><label for="lr-telefono">Teléfono</label><input id="lr-telefono" name="telefono" type="tel" autocomplete="tel"></div>
+                    <div class="form-group"><label for="lr-email">Correo electrónico <span class="req">*</span></label><input id="lr-email" name="email" type="email" autocomplete="email" required><p class="form-hint">Aquí te enviaremos la copia de tu reclamo y nuestra respuesta.</p></div>
+                </div>
+                <div style="margin-top:20px">
+                    <label class="lr-check"><input type="checkbox" id="lr-menor" name="es_menor"><span>Soy menor de edad</span></label>
+                </div>
+                <div class="lr-minor" id="lr-minor-box" hidden>
+                    <p class="form-hint" style="margin:0 0 16px">Si eres menor de edad, completa los datos de tu padre, madre o representante legal.</p>
+                    <div class="lr-grid">
+                        <div class="form-group full"><label for="lr-apoderado">Nombre del padre, madre o representante <span class="req">*</span></label><input id="lr-apoderado" name="apoderado_nombre"></div>
+                        <div class="form-group"><label for="lr-apoderado-doc">Documento del representante <span class="req">*</span></label><input id="lr-apoderado-doc" name="apoderado_documento"></div>
+                        <div class="form-group"><label for="lr-apoderado-email">Correo del representante</label><input id="lr-apoderado-email" name="apoderado_email" type="email"></div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="lr-block">
+                <legend><span>03</span> Identificación del bien contratado</legend>
+                <div class="lr-choice" role="radiogroup" aria-label="Tipo de bien contratado">
+                    <label><input type="radio" name="tipo_bien" value="Servicio" checked><span><strong>Servicio</strong>Producción técnica, escenografía, streaming u otro servicio de evento.</span></label>
+                    <label><input type="radio" name="tipo_bien" value="Producto"><span><strong>Producto</strong>Un bien entregado (por ejemplo, material audiovisual o impreso).</span></label>
+                </div>
+                <div class="lr-grid" style="margin-top:20px">
+                    <div class="form-group full"><label for="lr-descripcion-bien">Descripción del servicio o producto <span class="req">*</span></label><input id="lr-descripcion-bien" name="descripcion_bien" placeholder="Ej.: Sonido e iluminación para graduación del 12/09/2026" required></div>
+                    <div class="form-group"><label for="lr-monto">Monto reclamado (S/)</label><input id="lr-monto" name="monto" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00"></div>
+                    <div class="form-group"><label for="lr-fecha-servicio">Fecha del servicio o compra</label><input id="lr-fecha-servicio" name="fecha_servicio" type="date"></div>
+                    <div class="form-group full"><label for="lr-comprobante">N.º de comprobante de pago</label><input id="lr-comprobante" name="comprobante" placeholder="Boleta o factura (si no tienes, déjalo en blanco)"></div>
+                </div>
+            </fieldset>
+
+            <fieldset class="lr-block">
+                <legend><span>04</span> Detalle de la reclamación y pedido del consumidor</legend>
+                <div class="lr-choice" role="radiogroup" aria-label="Tipo de solicitud">
+                    <label><input type="radio" name="tipo_reclamacion" value="Reclamo" checked><span><strong>Reclamo</strong>Disconformidad relacionada a los productos o servicios.</span></label>
+                    <label><input type="radio" name="tipo_reclamacion" value="Queja"><span><strong>Queja</strong>Disconformidad no relacionada a los productos o servicios; o malestar o descontento respecto a la atención al público.</span></label>
+                </div>
+                <div class="lr-grid" style="margin-top:20px">
+                    <div class="form-group full"><label for="lr-detalle">Detalle <span class="req">*</span></label><textarea id="lr-detalle" name="detalle" rows="6" maxlength="3000" required placeholder="Describe qué ocurrió, cuándo y dónde."></textarea></div>
+                    <div class="form-group full"><label for="lr-pedido">Pedido <span class="req">*</span></label><textarea id="lr-pedido" name="pedido" rows="4" maxlength="2000" required placeholder="¿Qué solución esperas?"></textarea></div>
+                </div>
+            </fieldset>
+
+            <div class="lr-block">
+                <div class="lr-block-title"><span>05</span> Confirmación</div>
+                <div class="lr-legal-text">
+                    <p>* La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI.</p>
+                    <p>* El proveedor deberá dar respuesta al reclamo o queja en un plazo no mayor a quince (15) días hábiles improrrogables.</p>
+                </div>
+                <div class="lr-checks" style="margin-top:20px">
+                    <label class="lr-check"><input type="checkbox" id="lr-veraz" required><span>Declaro que la información proporcionada es verdadera y que soy el titular del reclamo o su representante. <span class="req">*</span></span></label>
+                    <label class="lr-check"><input type="checkbox" id="lr-privacidad" required><span>He leído y acepto la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a> para la atención de mi reclamo. <span class="req">*</span></span></label>
+                </div>
+            </div>
+
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="lr-error" id="lr-error" role="alert" hidden></div>
+            <button type="submit" class="form-button lr-submit" id="lr-submit">ENVIAR HOJA DE RECLAMACIÓN <span>→</span></button>
+        </form>
+        </div>
+
+        <div class="lr-result" id="lr-result" hidden tabindex="-1">
+            <div class="lr-result-head">
+                <span>RECLAMACIÓN REGISTRADA</span>
+                <h2 id="lr-result-num">—</h2>
+                <p id="lr-result-msg">Hemos recibido tu hoja de reclamación. Te enviamos una copia a tu correo y te responderemos en un plazo no mayor a 15 días hábiles.</p>
+            </div>
+            <div class="lr-copy">
+                <h3>Copia de la hoja de reclamación</h3>
+                <dl id="lr-copy-list"></dl>
+            </div>
+            <div class="lr-actions">
+                <button type="button" class="button button-orange" id="lr-print">Imprimir o guardar PDF</button>
+                <a href="index.html" class="button button-outline-dark">Volver al inicio</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <img src="Media/cropped-Logo-ShowTech-1-1.png" alt="" class="footer-logo-icon" width="36" height="36">
+                    <span class="logo-main">ShowTech Solutions</span>
+                </a>
+                <p>Organizadores de eventos en Lima. Planifiquemos juntos tu próximo evento.</p>
+            </div>
+            <div class="footer-column">
+                <h4>NAVEGACIÓN</h4>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-column">
+                <h4>SERVICIOS</h4>
+                <a href="servicios.html#produccion-tecnica">Producción Técnica</a>
+                <a href="servicios.html#escenografia">Escenografía y Ambientación</a>
+                <a href="servicios.html#streaming">Transmisión y Streaming</a>
+            </div>
+            <div class="footer-column">
+                <h4>CONTACTO</h4>
+                <a href="mailto:showtechsolutionssac@gmail.com">showtechsolutionssac@gmail.com</a>
+                <a href="https://api.whatsapp.com/send/?phone=51904628780&text&type=phone_number&app_absent=0" target="_blank" rel="noopener">+51 904 628 780</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 ShowTech Solutions. Todos los derechos reservados.</span>
+            <div class="footer-legal">
+                <a href="terminos-condiciones.html">Términos y condiciones</a>
+                <a href="politica-privacidad.html">Política de privacidad</a>
+                <a href="libro-reclamaciones.html" class="footer-libro"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5C3 4.7 3.7 4 4.5 4H10c1.1 0 2 .9 2 2v14c0-.8-.7-1.5-1.5-1.5h-6c-.8 0-1.5-.7-1.5-1.5V5.5Z"/><path d="M21 5.5c0-.8-.7-1.5-1.5-1.5H14c-1.1 0-2 .9-2 2v14c0-.8.7-1.5 1.5-1.5h6c.8 0 1.5-.7 1.5-1.5V5.5Z"/><path d="M6 8h3M6 11h3M15 8h3M15 11h3"/></svg>Libro de Reclamaciones</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- BOTÓN FLOTANTE DE WHATSAPP -->
+<a
+    href="https://api.whatsapp.com/send/?phone=51904628780&text&type=phone_number&app_absent=0"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Escríbenos por WhatsApp"
+>
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16.004 3C9.376 3 4 8.376 4 15.004c0 2.377.664 4.6 1.815 6.494L4 29l7.69-1.78a11.94 11.94 0 0 0 4.314.8h.004c6.627 0 12.003-5.376 12.003-12.004C28.011 8.376 22.635 3 16.004 3Zm0 21.86h-.003a9.86 9.86 0 0 1-5.02-1.375l-.36-.214-4.564 1.056 1.078-4.448-.235-.372a9.83 9.83 0 0 1-1.51-5.243c0-5.44 4.427-9.867 9.87-9.867 2.637 0 5.116 1.028 6.98 2.894a9.803 9.803 0 0 1 2.888 6.977c0 5.44-4.428 9.868-9.868 9.868l-.256.224Zm5.41-7.386c-.297-.148-1.755-.866-2.027-.965-.272-.099-.47-.148-.668.148-.198.297-.767.965-.94 1.163-.173.198-.347.223-.644.075-.297-.148-1.253-.462-2.386-1.472-.882-.786-1.478-1.757-1.651-2.054-.173-.297-.019-.457.13-.605.134-.133.297-.347.446-.52.148-.173.198-.297.297-.495.099-.198.05-.372-.025-.52-.075-.148-.668-1.612-.916-2.208-.242-.581-.487-.502-.668-.512l-.569-.01c-.198 0-.52.075-.792.372-.272.297-1.04 1.017-1.04 2.48 0 1.463 1.065 2.877 1.213 3.075.148.198 2.098 3.203 5.085 4.492.71.306 1.264.489 1.696.626.712.226 1.36.194 1.872.118.571-.085 1.755-.717 2.002-1.41.248-.693.248-1.286.173-1.41-.074-.123-.272-.198-.569-.347Z"/>
+    </svg>
+</a>
+
+<script src="assets/libro-reclamaciones.js"></script>
+
+</body>
+</html>
