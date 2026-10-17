@@ -19,8 +19,6 @@
     var $ = function (id) { return document.getElementById(id); };
     var errorBox = $('lr-error');
     var submitBtn = $('lr-submit');
-    var menor = $('lr-menor');
-    var menorBox = $('lr-minor-box');
     var tipoDoc = $('lr-tipodoc');
     var numDoc = $('lr-numdoc');
 
@@ -35,13 +33,6 @@
     }
 
     $('lr-fecha').textContent = fechaLarga(new Date());
-
-    // Menor de edad: muestra y exige los datos del representante
-    menor.addEventListener('change', function () {
-        menorBox.hidden = !menor.checked;
-        $('lr-apoderado').required = menor.checked;
-        $('lr-apoderado-doc').required = menor.checked;
-    });
 
     // Reglas del número de documento según el tipo
     function reglaDocumento() {
@@ -78,11 +69,6 @@
             ['Teléfono', valor('telefono') || '—'],
             ['Correo electrónico', valor('email')]
         ];
-        if (menor.checked) {
-            datos.push(['Menor de edad', 'Sí']);
-            datos.push(['Padre, madre o representante', valor('apoderado_nombre') + ' (' + valor('apoderado_documento') + ')']);
-            if (valor('apoderado_email')) datos.push(['Correo del representante', valor('apoderado_email')]);
-        }
         datos.push(
             ['Bien contratado', valor('tipo_bien')],
             ['Descripción', valor('descripcion_bien')],
