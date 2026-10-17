@@ -589,6 +589,8 @@ button, input, textarea, select { font: inherit; }
 .footer { padding: 75px 0 25px; background: var(--black); color: white; }
 .footer-main { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; padding-bottom: 60px; border-bottom: 1px solid rgba(255,255,255,.12); }
 .footer-logo { color: white; }
+.footer-logo { gap: 12px; }
+.footer-logo-icon { width: 36px; height: 36px; flex-shrink: 0; object-fit: contain; }
 .footer-brand p { max-width: 320px; margin-top: 20px; color: rgba(255,255,255,.5); font-size: 13px; }
 .footer-column { display: flex; flex-direction: column; gap: 10px; }
 .footer-column h4 { margin-bottom: 12px; color: var(--orange); font-size: 9px; letter-spacing: .16em; }
